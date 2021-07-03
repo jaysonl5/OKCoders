@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Event Listener Exercise
+        </title>
+    </head>
+    <body>
+        <div>
+            <label>First Name: </label>
+            <input id="firstName" type="text">
+            <label>Last Name: </label>
+            <input id="lastName" type="text">
+        </div>
+        <script>
+            var firstNameInput = document.getElementById("firstName");
+            var lastNameInput = document.getElementById("lastName");
+            firstNameInput.addEventListener('input', (e) => {
+                var firstNameValue = e.target.value;
+                console.log(firstNameValue);
+            })
+            lastNameInput.addEventListener('input', (e) => {
+                var lastNameValue = e.target.value;
+                console.log(lastNameValue);
+            })
+
+
+        </script>
+    </body>
+</html>

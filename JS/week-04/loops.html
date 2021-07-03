@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+
+        <div id="fizzbuzz">
+
+        </div>
+        <script>
+            var div = document.getElementById('fizzbuzz');
+            for(var i = 1; i <= 100; i++){
+                var result = document.createElement('p');
+                result.innerText = i
+                if(i % 3 == 0 && i % 5 == 0){
+                    result.innerText = 'fizzbuzz';
+                } else if (i % 3 == 0){
+                    result.innerText = 'fizz';
+                } else if (i % 5 == 0){
+                    result.innerText = 'buzz';
+                }
+                
+                div.appendChild(result)
+
+            }
+        </script>
+    </body>
+</html>

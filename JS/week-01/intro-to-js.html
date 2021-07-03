@@ -1,0 +1,18 @@
+<html>
+    <head><title>Hello world!</title></head>
+    <body>
+        <p>Hello World!</p>
+        <label>First Name: </label> 
+        <input type="text" id="firstNameInput">
+        <label>Last Name: </label>
+        <input type="text" id="lastNameInput">
+    </body>
+    <script>
+        console.log(`Test!`)
+        var firstName = document.getElementById('firstNameInput');
+        firstName.addEventListener('input', (e) => {
+            console.log(e.target.value);
+        })
+    </script>
+
+</html>

@@ -1,0 +1,40 @@
+var nameInput = document.getElementById('name');
+var emailInput = document.getElementById('email');
+var addressInput = document.getElementById('address');
+var addPetButton = document.getElementById('addPetBtn');
+var submit = document.getElementById('submit');
+
+var name = "";
+var email = "";
+var address = "";
+var pet = "";
+
+nameInput.addEventListener('input', (e) => {
+    name = e.target.value;
+})
+
+emailInput.addEventListener('input', (e) => {
+    email = e.target.value;
+})
+
+addressInput.addEventListener('input', (e) => {
+    address = e.target.value;
+})
+
+addPetButton.addEventListener('click', (e) => {
+    var container = document.getElementById('pet-inputs')
+    var div = document.createElement('div');
+    var label = document.createElement('label');
+    var newInput = document.createElement('input');
+    newInput.type="text";
+    label.innerText = "Pet Name: "
+    div.appendChild(label);
+    div.appendChild(newInput);
+    container.appendChild(div);
+})
+
+submit.addEventListener('click', (e) => {
+    console.log(name, email, address, pet);
+})
+
+

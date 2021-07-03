@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Event Listener Exercise
+        </title>
+    </head>
+    <body>
+        <div>
+            <label>Your age: </label>
+            <input id="ageInput" type="number">
+            <p id="ageFacts"></p>
+        </div>
+        <script>
+            var ageInput = document.getElementById("ageInput");
+            
+            ageInput.addEventListener('input', (e) => {
+                var inputValue = e.target.value;
+
+                var canServeInTheMilitary = inputValue >= 18;
+                var canVote = inputValue >= 18;
+                var canDrink = inputValue >= 21;
+                var ageIsEven = inputValue % 2 == 0;
+
+                var paragraph = document.getElementById("ageFacts");
+                
+                var stringToAdd = "";
+                stringToAdd += "Can you serve in the military? " + canServeInTheMilitary;
+                stringToAdd += " Can you vote? " + canVote;
+                stringToAdd += " Can you drink? " + canDrink;
+                stringToAdd += " Is your age an even number? " +  ageIsEven;
+
+                paragraph.innerHTML = stringToAdd;
+            })
+        </script>
+    </body>
+</html>
