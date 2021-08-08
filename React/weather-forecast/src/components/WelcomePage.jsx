@@ -1,3 +1,7 @@
+import {SCREENS} from './../constants';
+import {Button} from 'react-bootstrap'
+
+
 export default function WelcomePage(props) {
     
     const selections = [
@@ -7,12 +11,12 @@ export default function WelcomePage(props) {
     ]
 
     const forecastButtons = selections.map((item) => (
-        <button 
+        <Button 
             key={item.value} 
-            onClick={() => props.setForecastDays(item.value)}
+            onClick={() => {props.setForecastDays(item.value); props.setActiveScreen(SCREENS.ForecastPage)}}
         >
                 {item.label}
-        </button>
+        </Button>
     ))
 
     const layout = (
@@ -23,7 +27,6 @@ export default function WelcomePage(props) {
           {forecastButtons}
       
       </div>
-
     )
     return layout
   }
