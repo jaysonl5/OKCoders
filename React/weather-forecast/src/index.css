@@ -17,8 +17,43 @@ code {
     monospace;
 }
 
+.App{
+  margin:20px;
+  padding:20px;
+}
+
+.forecastSelect{
+  padding:20px;
+  background-image: linear-gradient(to bottom right, #fbbb863d, #f06da842); 
+  border-radius: 10px;
+  margin-bottom:  680px;
+  text-align: center;
+}
+
+.selectTitle{
+  font-size: 3rem;
+  font-weight: 900;
+  color:#23376E;
+}
+
 .btn{
   margin: 5px;
+}
+
+
+.forecastMain{
+  text-align: center;
+  margin-bottom: 450px;
+}
+
+.forecastTitle{
+  font-size: 3rem;
+  font-weight: 900;
+  color:#23376E;
+}
+
+.cardDeck{
+  padding-top: 20px;
 }
 
 .card{
@@ -27,11 +62,8 @@ code {
   margin: 10px;
   padding: 2px;
   color: #23376E;
-
-  /* background-image: linear-gradient(to bottom right, #fbbb86c5, #f06da8c5); */
-
   background-image: linear-gradient(to bottom   right, #ffffff, #ffffee);
-  transition: transform 250ms;
+  transition: transform 250ms ease-in-out;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.02),
   0 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -45,19 +77,11 @@ code {
 
 .card:hover{
   background-image: linear-gradient(to bottom right, #fbbb86c5, #f06da8c5);
-  transform: translateY(-10px);
+  transform: translateY(-20px);
 }
 
-.circle{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-
-  background-image: linear-gradient(to bottom right, #fbbb86c5, #f06da8c5);
-}
 
 .card-temp{
-  
   font-size: 3.5rem;
 }
 
@@ -67,9 +91,9 @@ code {
   color: white;
   background-color: lightgrey;
   border-radius: 25px;
-  
+  margin: 0 0 10px 50px;
   padding: 5px 10px 5px 10px;
-  width:45%;
+  width:50%;
   text-align: center;
 }
 
@@ -94,12 +118,12 @@ code {
   font-weight: 800;
 }
 
-.detail-button{
+.btn{
   background-color: #FBBA86 !important;
   border: 2px solid #FBBA86 !important;
 }
 
-.detail-button:hover{
+.btn:hover{
   background-color:#23376E !important;
   border: 2px solid #23376E !important;
 }

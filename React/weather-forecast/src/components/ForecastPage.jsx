@@ -1,7 +1,7 @@
 import {SCREENS} from '../constants'
 import { getForecastData } from '../simulateDatabase';
 import ForecastCard from './ForecastCard';
-import { Row, CardGroup } from 'react-bootstrap';
+import { Row, CardGroup, Button } from 'react-bootstrap';
 
 
 export default function ForecastPage(props) {
@@ -15,10 +15,12 @@ export default function ForecastPage(props) {
     )
  
     const layout = (
-        <div style = {{backgroundColor: "#FFFFFC"}}>
-            {returnWelcome}
+        <div className="forecastMain">
+            <Button onClick = {() => props.setActiveScreen(SCREENS.WelcomePage)}>
+                Select a new forecast
+            </Button>
 
-            <h3 style = {{color: 'white'}}>{props.forecastDays} Day Forecast</h3>
+            <h3 className='forecastTitle'>{props.forecastDays} Day Forecast</h3>
         <Row>
             <div className="cardDeck" >
                 <CardGroup>

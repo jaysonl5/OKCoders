@@ -20,10 +20,8 @@ export default function WelcomePage(props) {
     ))
 
     const layout = (
-      <div style={{
-          backgroundColor: "silver"
-      }}>
-          <h2>Select your forecast:</h2>
+      <div className="forecastSelect">
+          <h2 className="selectTitle">Select your forecast</h2>
           {forecastButtons}
       
       </div>

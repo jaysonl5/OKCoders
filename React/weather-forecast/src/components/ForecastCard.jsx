@@ -11,8 +11,6 @@ export default function ForecastCard(forecastData){
         return Math.floor(average);        
     }
 
-    
-
     const forecast = forecastData.data
 
     var outlook = '';
@@ -31,8 +29,10 @@ export default function ForecastCard(forecastData){
                         <Card.Text>                            
                             <h4 className="card-day">{forecastData.data.day}</h4>
                             <div className="card-temp">{getAvgTemp(forecastData.data.tempHigh, forecastData.data.tempLow)}°</div>
-                            <p className={outlook}>{forecastData.data.outlook}</p>
+
+                            <div className={outlook}>{forecastData.data.outlook}</div>
                             <p className="card-wind"><img alt="windy icon" src={wind} width='30px' /> {Math.floor(forecastData.data.windSpeed) + "mph " + forecastData.data.windDirection}</p>
+
                         </Card.Text>
 
                         <Button className="detail-button" onClick = {() => setShowDetail(true)}>Show Detail</Button>
