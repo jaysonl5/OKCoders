@@ -22,14 +22,38 @@ code {
 }
 
 .card{
-  width: 13rem;
-  margin: 2px;
+  width: 15rem;
+  border: 0px white solid !important;
+  margin: 10px;
   padding: 2px;
   color: #23376E;
+
+  /* background-image: linear-gradient(to bottom right, #fbbb86c5, #f06da8c5); */
+
+  background-image: linear-gradient(to bottom   right, #ffffff, #ffffee);
+  transition: transform 250ms;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0 12.5px 10px rgba(0, 0, 0, 0.035),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  0 100px 80px rgba(0, 0, 0, 0.07)
+;
+
 }
 
-.card-day{
-  
+.card:hover{
+  background-image: linear-gradient(to bottom right, #fbbb86c5, #f06da8c5);
+  transform: translateY(-10px);
+}
+
+.circle{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  background-image: linear-gradient(to bottom right, #fbbb86c5, #f06da8c5);
 }
 
 .card-temp{
@@ -43,6 +67,7 @@ code {
   color: white;
   background-color: lightgrey;
   border-radius: 25px;
+  
   padding: 5px 10px 5px 10px;
   width:45%;
   text-align: center;
@@ -64,11 +89,17 @@ code {
   background-image: url('./img/cloud-03.png');
 }
 
+.card-wind{
+  font-size: .8rem;
+  font-weight: 800;
+}
+
 .detail-button{
   background-color: #FBBA86 !important;
-  border-color: white !important;
+  border: 2px solid #FBBA86 !important;
 }
 
 .detail-button:hover{
   background-color:#23376E !important;
+  border: 2px solid #23376E !important;
 }
