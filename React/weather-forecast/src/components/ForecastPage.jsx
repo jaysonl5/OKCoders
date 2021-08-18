@@ -7,12 +7,6 @@ import { Row, CardGroup, Button } from 'react-bootstrap';
 export default function ForecastPage(props) {
 
     const data = getForecastData(props.forecastDays);
-
-    const returnWelcome = (
-        <div onClick = {() => props.setActiveScreen(SCREENS.WelcomePage)}>
-            <p>Return to Welcome</p>
-        </div>
-    )
  
     const layout = (
         <div className="forecastMain">

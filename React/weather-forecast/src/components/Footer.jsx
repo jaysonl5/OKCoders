@@ -1,6 +1,6 @@
 export default function Footer(){
    const layout = (<div>
-        copyright Bolt Media
+        © Bolt Media OKC - 2021
     </div>)
 
     return layout;
